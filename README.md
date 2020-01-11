@@ -11,7 +11,7 @@ in my case it will be sudo cordova create artificialdev com.yourdomain.artificia
 
 * Click enter on your terminal(enter password if asked)
 * After project is created, cd <name of your app> in my case cd artificialdev then click enter
-* Then on your terminal type sudo cordova platform add iOS android
+* Then on your terminal type sudo cordova platform add ios android
 * 
 
 ### NEXT STEPS
