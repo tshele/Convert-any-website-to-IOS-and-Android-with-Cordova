@@ -16,11 +16,13 @@ in my case it will be sudo cordova create artificialdev com.yourdomain.artificia
 
 ### NEXT STEPS
 
+
+* Next step is to go to your computer where your project was saved either Desktop or Development where ever you    keep them. Open your project and go to www folder, delete all the files that are there i.e CSS index.html JS and others.
+* Replace those files with your own files of your website and save them.
+
 * Now it is time to build your app, now type sudo cordova prepare
 * In your terminal type sudo cordova build
 * If your projects for both iOS and android were successfully built, you will get message 'BUILD SUCCESS'
-* Next step is to go to your computer where your project was saved either Desktop or Development where ever you    keep them. Open your project and go to www folder, delete all the files that are there i.e CSS index.html JS and others.
-* Replace those files with your own files of your website and save them. 
 
 * Next step is to go to IOS and double click on xcworkspace file and it will open your project in XCODE, you must have Xcode installed on your computer. Then run it and continue customising your Icons and so on.
 
