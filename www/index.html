@@ -1,0 +1,581 @@
+<!DOCTYPE HTML>
+<!--
+	Aesthetic by tshele
+	Twitter: http://twitter.com/tshelel_tshele
+	URL: https://artificialintellidev.com
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ARTIFICIAL INTELLIGENCE &mdash; DEVELOPER</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="artificialintellidev" />
+	<meta name="keywords" content="artificialintellidev" />
+	<meta name="author" content="artificialintellidev" />
+	<meta name="google-site-verification" content="Hn2JaEwdbgIASH3qdXwbBZd14ZryrZ8E8YijoQSq_Ps" />
+	<link rel="SHORTCUT ICON" href="https://www.artificialintellidev.com/favicon-2.ico">
+ <link rel="shortcut icon" href="/favicon-2.ico" type="image/x-icon">
+ <link rel="icon" href="/favicon-2.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="favicon-2.ico" >
+ <link rel="icon" href="animated_favicon.gif" type="image/gif" >
+ <script src=”https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+ <script src=”https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+ <script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>
+ <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+ <script type="text/javascript">
+	amzn_assoc_placement = "adunit0";
+	amzn_assoc_tracking_id = "artificial11-20";
+	amzn_assoc_ad_mode = "search";
+	amzn_assoc_ad_type = "smart";
+	amzn_assoc_marketplace = "amazon";
+	amzn_assoc_region = "US";
+	amzn_assoc_default_search_phrase = "Augmented reality";
+	amzn_assoc_default_category = "All";
+	amzn_assoc_linkid = "d55f827970f15061907b362e72d0d2ff";
+	amzn_assoc_design = "in_content";
+	amzn_assoc_title = "Virtual reality";
+	</script>
+	<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+
+
+
+ <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+ <script data-ad-client="ca-pub-3355142728496944" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ 
+ 
+	<!-- <script src="https://d3js.org/d3.v5.min.js"></script>-->
+	<script src="https://d3.v5.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+	<script lang="js">
+			async function doTraining(model){
+				const history = 
+					  await model.fit(xs, ys, 
+							{ epochs: 500,
+							  callbacks:{
+								  onEpochEnd: async(epoch, logs) =>{
+									  console.log("Epoch:" 
+												  + epoch 
+												  + " Loss:" 
+												  + logs.loss);
+									  
+								  }
+							  }
+							});
+			}
+			const model = tf.sequential();
+			model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+			model.compile({loss:'meanSquaredError', 
+						   optimizer:'sgd'});
+			model.summary();
+	   const xs = tf.tensor2d([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], [6, 1]);
+	   const ys = tf.tensor2d([-3.0, -1.0, 2.0, 3.0, 5.0, 7.0], [6, 1]);
+			doTraining(model).then(() => {
+				alert(model.predict(tf.tensor2d([10], [1,1])));
+			});
+		</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+ <!-- Load TensorFlow.js -->
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+
+ <!-- Place your code in the script tag below. You can also use an external .js file -->
+ <script>
+   // Notice there is no 'import' statement. 'tf' is available on the index-page
+   // because of the script tag above.
+
+   // Define a model for linear regression.
+   const model = tf.sequential();
+   model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+
+   // Prepare the model for training: Specify the loss and the optimizer.
+   model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
+
+   // Generate some synthetic data for training.
+   const xs = tf.tensor2d([1, 2, 3, 4], [4, 1]);
+   const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
+
+   // Train the model using the data.
+   model.fit(xs, ys).then(() => {
+	 // Use the model to do inference on a data point the model hasn't seen before:
+	 // Open the browser devtools to see the output
+	 model.predict(tf.tensor2d([5], [1, 1])).print();
+   });
+ </script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+
+	  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Artificial Intelligence Developer"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+	<body>
+	
+		<div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+			<iframe frameborder="0" height="100%" width="100%"
+			  src="https://www.youtube.com/watch?v=kWmX3pd1f10&list=PLeaUnrXM1znLZF8W1lSy0-t9-A89V1nBu&index=1">
+			</iframe>
+		  </div>
+		
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b9d0ba496c8f78a"></script>
+
+
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+		<nav class="gtco-nav" role="navigation">
+			<div class="gtco-container">
+				
+				<div class="row">
+					<div class="col-sm-2 col-xs-12">
+						<div id="favicon.ico"><a href="index.html">ARTIFICIAL INTELLIGENCE DEVELOPER</div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="https://spacemanne.glitch.me">Augmented Reality</a></li>
+							<li class="has-dropdown">
+								<a href="services.html">Services</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Machine Learning</a></li>
+									<li><a href="#">Android and IOS</a></li>
+									<li><a href="#">Deep Learning</a></li>
+									<li><a href="#">Artificial Intelligence</a></li>
+								</ul>
+							</li>
+							<li class="has-dropdown">
+								<a href="https://www.github.com/tshele">Projects</a>
+								<ul class="dropdown">
+									<li><a href="https://www.github.com/tshele">Stock Price Prediction</a></li>
+									<li><a href="https://www.github.com/tshele">Recommender System</a></li>
+									<li><a href="https://www.github.com/tshele">Anomaly Detection</a></li>
+									<li><a href="https://www.github.com/tshele">Employee Churn</a></li>
+								</ul>
+							</li>
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+		
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="owl-carousel owl-carousel-fullwidth">
+						<div class="item">
+							<a href="#">
+								<img src="images/taun-stewart-1359098-unsplash.jpg" alt="Taun">
+								<div class="slider-copy">
+									<h2>Anomaly Detection</h2>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="images/jared-brashier-600274-unsplash.jpg" alt="Jared">
+								<div class="slider-copy">
+									<h2>eCommerce</h2>
+								</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="images/jared-brashier-600274-unsplash.jpg" alt="Franck">
+								<div class="slider-copy">
+									<h2>Robotics</h2>
+								</div>
+							</a>
+						</div>
+			
+		<div class="item">
+			<a href="#">
+				<img src="images/Facial Recognition.png" alt="Facial Recognition">
+				<div class="slider-copy">
+					<h2>Facial Recognition</h2>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+						<h2>Work</h2>
+						<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=primeent&banner=15WCY9H26B6DWTTQ0Y02&f=ifr&linkID=38c6b281e2236f90b7d2216d47373f43&t=artificial11-20&tracking_id=artificial11-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+						<p>We build and develop apps and applications which are A.I powered, websites eCommerce and phone apps.</p>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="owl-carousel owl-carousel-carousel">
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/franck-v-516603-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Recommenders</h2></a>
+									<p class="role">eCommerce</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/owen-beard-786618-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Speech Recognition</h2></a>
+									<p class="role">Translate</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/alexandru-acea-1085875-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Development Studio</h2></a>
+									<p class="role">Developer</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/franck-v-740555-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="https://apps.apple.com/us/app/objecta/id1480097378?ls=1">Artificial Intelligence</h2></a>
+									<p class="role">AI </p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/annie-spratt-210740-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Recommenders</h2></a>
+									<p class="role">eCommerce</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/alexandru-acea-1085875-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Development Studio</h2></a>
+									<p class="role">Developer</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="gtco-item">
+									<a href="https://spacemanne.glitch.me"><img src="images/augmented reality.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="https://spacemanne.glitch.me">Augmented Reality</h2></a>
+									<p class="role">Virtual Reality</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/franck-v-517860-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="#">Voice Recognition</h2></a>
+									<p class="role">Voice</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="gtco-item">
+									<a href="#"><img src="images/jared-brashier-600274-unsplash.jpg" alt="" class="img-responsive"></a>
+									<h2><a href="https://apps.apple.com/us/app/drivemee/id1502834734?ls=1">Development</h2></a>
+									<p class="role">Games</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- END Work -->
+		<!-- Copy and Paste Me -->
+<div class="row">
+	<div class="column">
+  <blockquote class="embedly-card"><h4><a href="https://apps.apple.com/us/app/drivemee/id1502834734?ls=1">‎DriveMee</a></h4><p>‎Speed, thrill and more enjoyment. This app is full of excitement, designed mainly for the car driving fanatics. You can play the game anytime of the day and enjoy it. If you want to relax your mind and concentrate on something else. This is the kind of game you need.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</div>
+
+<div class="column">
+<blockquote class="embedly-card"><h4><a href="https://play.google.com/store/apps/details?id=com.tshelelitabe.drivemee">DriveMee - Apps on Google Play</a></h4><p>A game created for relaxation and enjoyment that can be played any time of the day. Whether you are a car enthusiast or love speed and adventure, this game is designed for you. After a long day at work or if you want to relax your mind need some distraction, just play the game and enjoy.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</div>
+</div>
+
+  
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-6 gtco-news">
+						<h2>News</h2>
+						
+						<div id="amzn-assoc-ad-c5b9724a-2d25-496f-a0d0-90ae7cdbf1e2"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c5b9724a-2d25-496f-a0d0-90ae7cdbf1e2"></script>
+						<ul>
+							<li>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLeaUnrXM1znLZF8W1lSy0-t9-A89V1nBu" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</li>
+							<li>
+								<a href="https://www.medium.com">
+									<span class="post-date">Daily</span>
+									<h3>A.I News</h3>
+									<p>AI is bringing more technology every day, for more insights on innovations, read more....</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://www.becominghuman.ai">
+									<span class="post-date">Everyday</span>
+									<h3>Becoming Human News</h3>
+									<p>AI is making inroads in human behaviour, chat bots and robots....</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="https://www.towardsdatascience.com">
+									<span class="post-date">The Future</span>
+									<h3>AI Tech</h3>
+									<p>Self Driving Cars, Drones, flying cars and medical technology, you can name them all....</p>
+								</a>
+							</li>
+						</ul>
+						<p><a href="#" class="btn btn-sm btn-special">More News</a></p>
+
+					</div>
+					
+					<p><model-viewer src="third_party/Astronaut/Astronaut.glb"
+					auto-rotate camera-controls
+              alt="A 3D model of an astronaut">
+</model-viewer></p>
+
+<p><model-viewer src="third_party/DamagedHelmet/DamagedHelmet.gltf"
+	ar
+	auto-rotate camera-controls
+	camera-orbit="-20deg 75deg 2m"
+	environment-image="third_party/hdrihaven/studio_small_07_1k.hdr"
+	alt="A 3D model of a damaged sci-fi helmet">
+</model-viewer></p>
+					<!-- END News -->
+					<div class="col-md-5 col-md-push-1 gtco-testimonials">
+						<h2>Qoutes</h2>
+						<blockquote>
+							<p>&ldquo;Nothing in life is impossible, the word  itself says "I'mposiible"&ldquo;</p>
+							<p class="author"><cite>&mdash; Audrey Hepburn</cite></p>
+						</blockquote>
+						<blockquote>
+							<p>&ldquo;Twenty years from nou will be disappointed by the things that you didn't do than by the things you did do, so throw off the bowliness, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover&ldquo;</p>
+							<p class="author"><cite>&mdash; Mark Twain</cite></p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div><div id="amzn-assoc-ad-071fefd3-b255-4cc8-8c73-543a8311b7a0"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=071fefd3-b255-4cc8-8c73-543a8311b7a0"></script>
+
+		<!-- END  -->
+		<div class="gtco-section gto-features">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="feature-left">
+							<i class="ti-zip icon"></i>
+							<div class="copy">
+								<h3>Developer</h3>
+								<p>As a Developer, I can develop in HTML5, Java, Python and very skilled in developing Android and IOS apps powered by Artificial Intelligence.</p>
+								<p><a href="https://www.tsheledev.com" class="gtco-more">Learn more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-left">
+							<i class="ti-hummer icon"></i>
+							<div class="copy">
+								<h3>Planning</h3>
+								<p>All of our work is developed and innovated as per your needs, it is custom built.</p>
+								<p><a href="#" class="gtco-more">Learn more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-left">
+							<i class="ti-plug icon"></i>
+							<div class="copy">
+								<h3>News &amp; Events</h3>
+								<p>Read the link below for more news and events.</p>
+								<p><a href="#" class="gtco-more">Learn more</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="gtco-footer" class="gtco-section" role="contentinfo">
+			<div class="gtco-container">
+				<div class="row row-pb-md">
+					<div class="col-md-4 gtco-widget gtco-footer-paragraph">
+						<h3>Artificial Intelligence Developer</h3>
+						<p>We build custom designed we sites, eCommerce, Android and IOS artificial intelligence powered apps.</p>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-6 gtco-footer-link">
+								<h3>Links</h3>
+								<ul class="gtco-list-link">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="portfolio.html">Features</a></li>
+									<li><a href="services.html">Products</a></li>
+									<li><a href="#">Qoutes</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6 gtco-footer-link">
+								<h3>Work</h3>
+								<ul class="gtco-list-link">
+									<li><a href="#">Facial Recognition</a></li>
+									<li><a href="#">Recommender Systems</a></li>
+									<li><a href="#">House Price Prediction</a></li>
+									<li><a href="#">Anomaly Detection</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						<div class="gtco-contact-info">
+							<h3>Our Contact Details</h3>
+							<ul >
+								<li class="address">Tableview, Cape Town, South Africa</li>
+								<li class="phone"><a href="tel://+27815066374">+27847226833</a></li>
+								<li class="email"><a href="artificial@artificialintellidev.com">artificial@artificialintellidev.com</a></li>
+								<li class="url"><a href="https://www.artificialintellidev.com">www.artificialintellidev.com</a></li>
+							</ul>
+						</div>
+			<div class="gtco-copyright">
+				<div class="gtco-container">
+					<div class="row">
+						<div class="col-md-6 text-left">
+							<p><small>&copy; All Rights Reserved. </small></p>
+						</div>
+						<div class="col-md-6 text-right">
+							<p><small>Designed by Tshele  <a href="https://artificialintellidev.com" target="_blank">artificialintelligencedev</a></small> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END footer -->
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b9d0ba496c8f78a"></script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b9d0ba496c8f78a"></script>
+
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+				<div class="addthis_relatedposts_inline"></div>
+				
+				<script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+<script type="text/javascript">
+    amzn_assoc_ad_type = "link_enhancement_widget";
+    amzn_assoc_tracking_id = "artificial11-20";
+    amzn_assoc_linkid = "932d8cfbff364a5b45ec751aa670a15b";
+    amzn_assoc_placement = "";
+    amzn_assoc_marketplace = "amazon";
+    amzn_assoc_region = "US";
+</script>
+<script src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=US"></script>						
+	</body>
+	<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=carelectronics&banner=1AXZ8SQTB92AHHR8P0R2&f=ifr&linkID=41b5f586d0d7db4af5a8c21fc7d1ea45&t=artificial11-20&tracking_id=artificial11-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+	<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-3355142728496944">
+</amp-auto-ads>
+	<script src="app.js"></script>
+</html>
+
