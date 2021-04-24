@@ -8,8 +8,8 @@ This is the simplest way of converting your website into an IOS and Android app.
 
 *First install cordova on your computer, in your terminal type npm install -g cordova(Windows) for the Mac type sudo npm install -g cordova. To test if cordoav is installed, type cordova in your terminal and follow the following steps to continue.
 
-* On your terminal type sudo cordova create name of your app com.yourdomain.name of your app name of your app
-in my case it will be sudo cordova create artificialdev com.yourdomain.artificialdev artificialdev 
+* On your terminal type sudo cordova create name of your app com.yourcompay/organisation.name of your app name of your app
+in my case it will be sudo cordova create artificialdev com.yourcompay/organisation.artificialdev artificialdev 
 * Click enter on your terminal(enter password if asked)
 * After project is created, cd <name of your app> in my case cd artificialdev then click enter
 * Then on your terminal type sudo cordova platform add ios android
