@@ -2,16 +2,16 @@
 
 # CONVERTING A WEBSITE TO AN IOS AND ANDROID APP GUIDELINE
 
-This is the simplest way of converting your website into an IOS and Android app. Fistly you need to have a knowledge of XCODE and Android Studio/Intellij. Also you should have Cordova installed on your computer as explained in the website https://www.apache.cordova.org. I have used my website https://www.artificialintellidev.com to build both apps.
+This is the simplest way of converting your website into an IOS and Android app. Fistly you need to have a knowledge of XCODE and Android Studio/Intellij. Also you should have Cordova installed on your computer as explained in the website https://www.apache.cordova.org. You can use any of your websites to build both apps.
 
 ## GETTING STARTED
 
 *First install cordova on your computer, in your terminal type npm install -g cordova(Windows) for the Mac type sudo npm install -g cordova. To test if cordoav is installed, type cordova in your terminal and follow the following steps to continue.
 
 * On your terminal type sudo cordova create name of your app com.yourcompay/organisation.name of your app name of your app
-in my case it will be sudo cordova create artificialdev com.yourcompay/organisation.artificialdev artificialdev 
+in my case it will be sudo cordova create yourwebsite com.yourcompay/organisation.yourwebsite yourwebsite 
 * Click enter on your terminal(enter password if asked)
-* After project is created, cd <name of your app> in my case cd artificialdev then click enter
+* After project is created, cd <name of your app> in my case cd yourwebsite then click enter
 * Then on your terminal type sudo cordova platform add ios android
 
 
